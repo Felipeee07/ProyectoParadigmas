@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.control.TableColumn?>
+
+<?import javafx.scene.control.TableView?>
+
+<?import javafx.scene.control.TextField?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane 
+ prefHeight="450" 
+ prefWidth="700" 
+ style="-fx-background-color: #f2f2f2;"
+ xmlns="http://javafx.com/javafx/25" 
+ xmlns:fx="http://javafx.com/fxml/1"
+ fx:controller="co.edu.poli.proyecto.controlador.FormularioControlador">
+
+<!-- TITULO -->
+<Label layoutX="240" layoutY="20" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Gestión de Productos" />
+
+<!-- FORMULARIO -->
+<Label layoutX="40" layoutY="80" text="Código:" />
+<TextField fx:id="txtCodigo" layoutX="150" layoutY="75" prefWidth="150" />
+
+<Label layoutX="40" layoutY="120" text="Nombre:" />
+<TextField fx:id="txtNombre" layoutX="150" layoutY="115" prefWidth="150" />
+
+<Label layoutX="40" layoutY="160" text="Fecha Caducidad:" />
+<TextField fx:id="txtFechaCaducidad" layoutX="150" layoutY="155" prefWidth="150" />
+
+<Label layoutX="40" layoutY="200" text="Cantidad:" />
+<TextField fx:id="txtCantidad" layoutX="150" layoutY="195" prefWidth="150" />
+
+<!-- BOTONES -->
+<Button layoutX="350" layoutY="75" onAction="#accionCrear" prefHeight="30.0" prefWidth="58.0" text="Crear" />
+
+<Button layoutX="446.0" layoutY="128.0" onAction="#accionBuscar" prefHeight="30.0" prefWidth="58.0" text="Buscar" />
+
+<Button layoutX="350.0" layoutY="128.0" onAction="#accionListar" prefHeight="30.0" prefWidth="58.0" text="Listar" />
+
+<Button layoutX="431.0" layoutY="76.0" onAction="#accionModificar" prefHeight="30.0" prefWidth="77.0" text="Modificar" />
+
+<Button layoutX="534.0" layoutY="76.0" onAction="#accionEliminar" prefHeight="30.0" prefWidth="58.0" text="Eliminar" />
+
+<Button layoutX="475.0" layoutY="196.0" onAction="#accionSerializar" text="Guardar archivo" />
+
+<Button layoutX="348.0" layoutY="196.0" onAction="#accionDeserializar" text="Cargar archivo" />
+
+<!-- TABLA -->
+<TableView fx:id="tabla" layoutX="40" layoutY="250" prefHeight="160" prefWidth="620">
+
+    <columns>
+        <TableColumn fx:id="colCodigo" prefWidth="120" text="Código" />
+        <TableColumn fx:id="colNombre" prefWidth="120" text="Nombre" />
+        <TableColumn fx:id="colFecha" prefWidth="198.4" text="Fecha Caducidad" />
+        <TableColumn fx:id="colCantidad" prefWidth="180.8" text="Cantidad" />
+    </columns>
+</TableView>
+
+</AnchorPane>
